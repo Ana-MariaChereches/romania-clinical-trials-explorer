@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Large raw data: keep a small sample in the repo instead
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sample_*.json
+
+# Local database
+*.db
+*.sqlite
