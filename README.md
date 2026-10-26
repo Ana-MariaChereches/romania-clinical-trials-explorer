@@ -17,7 +17,26 @@ The project is also a practical exercise in applying Python, pandas, SQL and Pow
 
 ## Data source
 
-[ClinicalTrials.gov API v2](https://clinicaltrials.gov/data-api/api) (public, free). Population data for v2 comparisons: Eurostat.
+**Source:** [ClinicalTrials.gov](https://clinicaltrials.gov), the public registry of clinical studies run by the U.S. National Library of Medicine. Official API page: https://clinicaltrials.gov/data-api/api
+
+**Endpoint:** `https://clinicaltrials.gov/api/v2/studies` (API v2, no key required)
+
+**Request parameters used:**
+
+| Parameter | Value | Purpose |
+|---|---|---|
+| `query.locn` | `Romania` | Studies whose location fields contain "Romania" |
+| `pageSize` | `1000` | Studies per page |
+| `countTotal` | `true` | Return the total number of matching studies |
+| `pageToken` | from `nextPageToken` | Move to the next page |
+
+**How the endpoint and parameters were identified:** from community tutorials, then verified by testing the request (HTTP 200, response structure inspected) and by comparing the returned total with the number of studies retrieved.
+
+**Extraction date:** 2026-10-26. The registry is updated continuously, so the total will change over time.
+
+**Result:** 3,721 studies retrieved over 4 pages (`02_extract_data.ipynb`), saved as raw JSON (not stored in the repository).
+
+**Finding:** `query.locn` matches text, not the country of the site. One study (NCT00336544) matched only because "ROMANIA" appears in facility names located in the United States. Site-level analysis therefore filters on the `country` field. 3,720 studies have at least one site in Romania.
 
 ## Tools
 
