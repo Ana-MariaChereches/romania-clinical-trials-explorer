@@ -97,6 +97,7 @@ docs/            requirements, data decisions, user feedback
 - Costs, approval timelines and patient availability cannot be measured with this data.
 - The phase field is a list; a study with several phases gets one combined label (for example "Phase 1/2"). Studies without a phase are labelled "No phase".
 - The current year is incomplete and is labelled as partial.
+- Studies with status SUSPENDED (2) are left out of the stop rate; studies with status UNKNOWN (67) are reported separately.
 - More limitations will be added as the data is explored.
 
 ## How to run
