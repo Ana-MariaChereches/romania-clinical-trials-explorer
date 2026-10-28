@@ -1,6 +1,6 @@
 # Romania Clinical Trials Feasibility Explorer
 
-> **Status: work in progress (v1).** Requirements are written; data extraction is next. See the roadmap below.
+> **Status: work in progress (v1).** Requirements are written and the data is extracted; building the clean tables is next. See the roadmap below.
 
 ## Problem statement
 
@@ -14,6 +14,12 @@ This project builds a cleaned dataset and an interactive dashboard of studies wi
 These are exploratory questions: the project describes patterns, it does not claim to explain why sponsors choose Romania.
 
 The project is also a practical exercise in applying Python, pandas, SQL and Power BI to real, messy data.
+
+## Reference scenario
+
+> "I am planning a Phase 3 study in a given therapeutic area. In which cities can I find sites, how many competing studies are active in Romania, and which sponsors are already present?"
+
+Every chart in v1 is meant to help answer this scenario. Choosing between countries needs other countries and is planned for v2. Target date for v1: 2026-11-20.
 
 ## Data source
 
@@ -61,7 +67,7 @@ docs/            requirements, data decisions, user feedback
 ## Roadmap
 
 - [x] Requirements and scope (v1)
-- [ ] Extract data from the API
+- [x] Extract data from the API
 - [ ] Clean and model the data (pandas)
 - [ ] SQL analysis, cross-checked against pandas results
 - [ ] Power BI dashboard (v1: landscape, sponsors, cities, competition, stop rate)
@@ -73,6 +79,13 @@ docs/            requirements, data decisions, user feedback
 
 - ClinicalTrials.gov does not contain every European trial (EU CTIS / EudraCT are separate registries).
 - Enrolment figures refer to the whole study, not to Romania.
+- Study status is global: "active" and "stopped" describe the whole study, not the Romanian sites. Studies that started recently have not had time to stop, so the stop rate is shown only for start years 2015-2021.
+- Start dates are text with different forms (for example `2008-06` and `2015-12-18`); the year is taken from the first four characters. Some studies have no start date, and the date type (actual or estimated) is missing for part of them. Studies with an estimated start date are kept apart from started studies.
+- Expanded access programmes and observational studies are excluded; only interventional studies are analysed.
+- Sponsors are grouped by the registry's `class` field (`INDUSTRY`, `OTHER`, `NETWORK`, `OTHER_GOV`). The exact meaning of `OTHER` and `NETWORK` is still to be checked against the registry's data definitions.
+- City and site names are not written uniformly; cities are cleaned with a hand-made mapping and the number of distinct sites is approximate.
+- A study can belong to several therapeutic areas, so counts per area cannot be added up.
+- Contact fields (people's names, phone numbers, e-mails) are dropped before any table is saved.
 - Costs, approval timelines and patient availability cannot be measured with this data.
 - More limitations will be added as the data is explored.
 
