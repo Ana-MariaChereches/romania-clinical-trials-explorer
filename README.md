@@ -42,13 +42,20 @@ Every chart in v1 is meant to help answer this scenario. Choosing between countr
 
 **Result:** 3,721 studies retrieved over 4 pages (`02_extract_data.ipynb`), saved as raw JSON (not stored in the repository).
 
+| Step | Studies |
+|---|---|
+| Retrieved from the API | 3,721 |
+| At least one site in Romania | 3,720 |
+| Start year 2015 or later | N |
+| Interventional only | M |
+
 **Finding:** `query.locn` matches text, not the country of the site. One study (NCT00336544) matched only because "ROMANIA" appears in facility names located in the United States. Site-level analysis therefore filters on the `country` field. 3,720 studies have at least one site in Romania.
 
 ## Tools
 
 Python (pandas), SQL (SQLite), Power BI
 
-## Repository structure
+## Repository structure (planned)
 
 ```
 data/raw/        raw API responses, never edited
@@ -87,6 +94,8 @@ docs/            requirements, data decisions, user feedback
 - A study can belong to several therapeutic areas, so counts per area cannot be added up.
 - Contact fields (people's names, phone numbers, e-mails) are dropped before any table is saved.
 - Costs, approval timelines and patient availability cannot be measured with this data.
+- The phase field is a list; a study with several phases gets one combined label (for example "Phase 1/2"). Studies without a phase are labelled "No phase".
+- The current year is incomplete and is labelled as partial.
 - More limitations will be added as the data is explored.
 
 ## How to run
