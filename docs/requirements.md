@@ -57,13 +57,13 @@ Every chart in v1 must help answer this scenario. The country choice itself ("sh
 | Phase | One row per study, with one ordered label: Early Phase 1, Phase 1, Phase 1/2, Phase 2, Phase 2/3, Phase 3, Phase 4, No phase. "No phase" (device, behavioural, other, or a missing phase field) is shown separately and left out of phase charts | Splitting the list into one row per phase would count a Phase 1/2 study twice |
 | Start year | First four characters of the start date, as a number. The per-year chart counts only studies with an actual start date; the current year is labelled "partial (year to date)". Studies with an estimated start date are shown as "planned" and used only for question 2. A study without a date type is treated as actual if its status is COMPLETED or TERMINATED (it must have started), otherwise as unknown and left out of the per-year chart | Estimated dates would mix planned and started studies; the current year is incomplete |
 | "Active study" | Study-level overall status RECRUITING, ACTIVE_NOT_RECRUITING or ENROLLING_BY_INVITATION; NOT_YET_RECRUITING is included but labelled separately. Site status is used only as a secondary filter where it exists | Site status is missing for part of the sites; not-yet-recruiting studies compete for patients soon but some never start |
-| "Stopped study" | Status TERMINATED or WITHDRAWN. SUSPENDED is left out of the numerator and the denominator for now, because the study may resume. **[open: count the SUSPENDED studies in the 2015+ interventional set; if there are only a few, keep them out and state the number in the README; if there are many, show them as a separate category]** | "Stopped" must mean the study will not run |
+| "Stopped study" | Status TERMINATED or WITHDRAWN. SUSPENDED is left out of the numerator and the denominator, because the study may resume. There are only 2 such studies in the final set (extract of 2026-10-26), so they stay out and the number is stated in the README | "Stopped" must mean the study will not run |
 | Stop rate | Stopped studies / studies with a final status (COMPLETED + TERMINATED + WITHDRAWN), by phase, for start years 2015-2021 only. It describes the whole study, not the Romanian sites | Ongoing studies would push the rate down; recent starts have not had time to stop; a study often stops for global reasons |
 | Sponsor | Lead sponsor only. Classes grouped as Industry / Academic and other / Networks. A top 10-15 of industry sponsors uses a hand-made alias table (for example "Pfizer" and "Pfizer Inc."). **[open: confirm the meaning of `OTHER` and `NETWORK` in the ClinicalTrials.gov data definitions before naming the "Academic and other" group]** | A feasibility manager needs sponsor names, but only the top ones are worth the cleaning effort |
 | Therapeutic area | MeSH branches from `derivedSection.conditionBrowseModule.browseBranches`, kept in a separate study-area table (one row per study and area). Counts are distinct studies per area; areas are never added up. **[open: confirm the field exists in the raw JSON (`all_studies[0].keys()`) and decide whether to group branches into about 8-10 areas]** | Conditions are free text; one study can belong to several areas |
 | Competition | For each area and phase: number of active studies, number of distinct Romanian sites, number of distinct sponsors. Cells with fewer than 5 studies are marked "limited data" and shown as counts only | One number hides the difference between a study with 2 sites and one with 40 |
 | "Site" (centre) | A pair of (cleaned city, facility name without codes such as "Site 0001"). Counts are approximate. Cities are cleaned with a hand-made mapping table (diacritics and English/Romanian spellings) | The same hospital is written differently in different studies |
-| Unknown status | Reported separately as a data limitation | |
+| Unknown status | Reported separately as a data limitation (67 studies in the final set) | |
 
 ## 5. Business questions (v1)
 
@@ -101,6 +101,7 @@ Each page title is a sentence that states what the page shows, not the name of a
 - Sponsor class values (`INDUSTRY`, `OTHER`, `NETWORK`, `OTHER_GOV`) come from the registry; the exact meaning of `OTHER` and `NETWORK` is still to be checked.
 - Contact fields were dropped; they are not needed for any analysis.
 - Costs, approval timelines and patient availability cannot be measured with this data.
+- Some estimated start dates are in the past (records that were not updated). These studies are labelled "planned" and kept out of the per-year chart.
 
 ## 8. Roadmap
 
