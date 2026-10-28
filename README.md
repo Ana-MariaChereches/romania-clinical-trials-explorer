@@ -40,14 +40,14 @@ Every chart in v1 is meant to help answer this scenario. Choosing between countr
 
 **Extraction date:** 2026-10-26. The registry is updated continuously, so the total will change over time.
 
-**Result:** 3,721 studies retrieved over 4 pages (`02_extract_data.ipynb`), saved as raw JSON (not stored in the repository).
+**Result:** 3,721 studies retrieved over 4 pages (`02_extract_data.ipynb`), saved as raw JSON (not stored in the repository). After restricting to studies with a start year of 2015 or later, 1,984 studies remain for analysis; 1,717 of them are interventional.
 
 | Step | Studies |
 |---|---|
 | Retrieved from the API | 3,721 |
 | At least one site in Romania | 3,720 |
-| Start year 2015 or later | N |
-| Interventional only | M |
+| Start year 2015 or later | 1,984 |
+| Interventional only | 1,717 |
 
 **Finding:** `query.locn` matches text, not the country of the site. One study (NCT00336544) matched only because "ROMANIA" appears in facility names located in the United States. Site-level analysis therefore filters on the `country` field. 3,720 studies have at least one site in Romania.
 
