@@ -16,6 +16,7 @@ venv/
 data/raw/*
 !data/raw/.gitkeep
 !data/raw/sample_*.json
+raw_studies.json
 
 # Local database
 *.db
