@@ -50,6 +50,7 @@ Every chart in v1 is meant to help answer this scenario. Choosing between countr
 | Interventional only | 1,717 |
 
 **Finding:** `query.locn` matches text, not the country of the site. One study (NCT00336544) matched only because "ROMANIA" appears in facility names located in the United States. Site-level analysis therefore filters on the `country` field. 3,720 studies have at least one site in Romania.
+The date type (actual or estimated) is missing for some studies. A study without a date type is treated as started if its status is COMPLETED or TERMINATED (it must have started); the remaining 9 studies are labelled "unknown" and left out of the per-year chart. 45 studies have an estimated start date and are labelled "planned"; 23 of them have an estimated start year before 2026, which suggests records that were not updated. One interventional study has no phase field and is labelled "No phase".
 
 ## Tools
 
