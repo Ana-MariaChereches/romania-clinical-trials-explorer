@@ -54,6 +54,7 @@ Filters and the study table are built in `03_build_tables.ipynb`; the cleaned st
 **Finding:** `query.locn` matches text, not the country of the site. One study (NCT00336544) matched only because "ROMANIA" appears in facility names located in the United States. Site-level analysis therefore filters on the `country` field. 3,720 studies have at least one site in Romania.
 The date type (actual or estimated) is missing for some studies. A study without a date type is treated as started if its status is COMPLETED or TERMINATED (it must have started); the remaining 9 studies are labelled "unknown" and left out of the per-year chart. 45 studies have an estimated start date and are labelled "planned"; 23 of them have an estimated start year before 2026, which suggests records that were not updated. One interventional study has no phase field and is labelled "No phase".
 287 of the 1,717 interventional studies (about 17%) have no phase (device, behavioural or other interventions without a defined phase; one study has no phase field). They are kept in the table and in charts that do not depend on phase, and left out of phase charts.
+**Finding:** The `browseBranches` field of the registry's derived section is not present in the extract; therapeutic areas are built from the `meshes` and `ancestors` fields of `conditionBrowseModule`.
 
 ## Tools
 
@@ -96,6 +97,7 @@ docs/            requirements, data decisions, user feedback
 - Sponsors are grouped by the registry's `class` field (`INDUSTRY`, `OTHER`, `NETWORK`, `OTHER_GOV`). The exact meaning of `OTHER` and `NETWORK` is still to be checked against the registry's data definitions.
 - City and site names are not written uniformly; cities are cleaned with a hand-made mapping and the number of distinct sites is approximate.
 - A study can belong to several therapeutic areas, so counts per area cannot be added up.
+- Therapeutic areas are grouped from the registry's MeSH terms with a hand-made mapping, so the grouping is approximate. About 11% of studies (194 of 1,717) have no MeSH term and are shown as "Not classified".
 - Contact fields (people's names, phone numbers, e-mails) are dropped before any table is saved.
 - Costs, approval timelines and patient availability cannot be measured with this data.
 - The phase field is a list; a study with several phases gets one combined label (for example "Phase 1/2"). Studies without a phase are labelled "No phase".
