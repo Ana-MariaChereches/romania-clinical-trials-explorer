@@ -97,7 +97,7 @@ docs/            requirements, data decisions, user feedback
 - Sponsors are grouped by the registry's `class` field (`INDUSTRY`, `OTHER`, `NETWORK`, `OTHER_GOV`). The exact meaning of `OTHER` and `NETWORK` is still to be checked against the registry's data definitions.
 - City and site names are not written uniformly; cities are cleaned with a hand-made mapping and the number of distinct sites is approximate.
 - A study can belong to several therapeutic areas, so counts per area cannot be added up.
-- Therapeutic areas are grouped from the registry's MeSH terms with a hand-made mapping, so the grouping is approximate. About 11% of studies (194 of 1,717) have no MeSH term and are shown as "Not classified": the registry did not match the condition text (for example because of typos or added qualifiers) or the entry is not a disease (for example healthy participants).
+- Therapeutic areas are grouped from the registry's MeSH terms with a hand-made mapping, so the grouping is approximate. 13 areas are used; about 16% of studies (268 of 1,717) are shown as "Not classified": 194 have no MeSH term (the registry did not match the condition text, for example because of typos or added qualifiers, or the entry is not a disease) and 74 have terms outside the listed areas (for example behavioural studies).
 - Contact fields (people's names, phone numbers, e-mails) are dropped before any table is saved.
 - Costs, approval timelines and patient availability cannot be measured with this data.
 - The phase field is a list; a study with several phases gets one combined label (for example "Phase 1/2"). Studies without a phase are labelled "No phase".
