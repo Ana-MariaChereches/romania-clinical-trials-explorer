@@ -80,7 +80,7 @@ docs/            requirements, data decisions, user feedback
 
 - [x] Requirements and scope (v1)
 - [x] Extract data from the API
-- [ ] Clean and model the data (pandas)
+- [x] Clean and model the data (pandas)
 - [ ] SQL analysis, cross-checked against pandas results
 - [ ] Power BI dashboard (v1: landscape, sponsors, cities, competition, stop rate)
 - [ ] Feedback from 2-3 people in the field, documented
@@ -104,6 +104,10 @@ docs/            requirements, data decisions, user feedback
 - The current year is incomplete and is labelled as partial.
 - Studies with status SUSPENDED (2) are left out of the stop rate; studies with status UNKNOWN (67) are reported separately.
 - Coordinates in the registry are generated from the site text and are not reliable for ambiguous names. For example, only 13 of 104 sites in Florești (Cluj county) have coordinates in the right place; the others point to a different part of the country. Coordinates are therefore not used for per-site analysis.
+- About 38% of Romanian sites (2,841 of 7,524) have only a placeholder name in the registry (for example "Site 1901" or "Research Site") or no name. They are counted by city but not as centres, so centre rankings cover only the named sites.
+- Facility names are unified with an automatic key plus a hand-made alias table for the largest centres only, so the number of centres (about 1,830) is approximate.
+- Practices named after a physician are shown as "Private practice" so that no personal names are stored.
+- Registry coordinates are geocoded from text and are unreliable for some sites (142 missing, 34 far from their city; "Florești" was placed in Prahova instead of Cluj). The map therefore works at city level, using the median coordinates per city.
 - More limitations will be added as the data is explored.
 
 ## How to run
