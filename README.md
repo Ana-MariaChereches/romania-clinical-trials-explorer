@@ -65,7 +65,7 @@ Python (pandas), SQL (SQLite), Power BI
 ```
 data/raw/        raw API responses, never edited
 data/clean/      cleaned tables
-notebooks/       exploration and analysis
+notebooks/      exploration and table building (03 studies, 04 therapeutic areas, 05 sites)
 src/             extraction and cleaning scripts
 sql/             queries, each documented with the question it answers
 docs/            requirements, data decisions, user feedback
