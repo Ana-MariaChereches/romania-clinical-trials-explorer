@@ -5,7 +5,6 @@
 -- NOT_YET_RECRUITING is included and counted separately (notYet).
 -- Studies can belong to several areas, so rows must not be added up.
 -- namedCentres excludes sites without a real name ("Generic site"), so it is a minimum.
-q3 = """
 SELECT a.area,
        s.phaseLabel,
        COUNT(DISTINCT s.nctId) AS studies,
@@ -22,5 +21,3 @@ WHERE s.status IN ('RECRUITING', 'ACTIVE_NOT_RECRUITING',
                    'ENROLLING_BY_INVITATION', 'NOT_YET_RECRUITING')
 GROUP BY a.area, s.phaseLabel
 ORDER BY studies DESC;
-"""
-print(pd.read_sql(q3, conn).head(25).to_string())
