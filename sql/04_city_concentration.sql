@@ -1,9 +1,8 @@
--- Question 4: share of studies concentrated in the largest cities.
+-- Question 4: Which cities and sites appear in the most studies, and what share of
+-- studies is concentrated in the largest cities?
 -- Cities are ranked by number of studies. Each study is counted once, at the
 -- highest-ranked city where it has a site (bestRank). Cumulative share =
 -- studies with at least one site in the top N cities, without double counting.
-# how many studies have at least one center in the top N cities, excluding duplicates
-q6 = """
 WITH city_rank AS (
     SELECT city,
            ROW_NUMBER() OVER (ORDER BY COUNT(DISTINCT nctId) DESC) AS rnk
@@ -27,6 +26,4 @@ FROM study_best AS b
 JOIN city_rank AS c ON c.rnk = b.bestRank
 GROUP BY b.bestRank, c.city
 ORDER BY b.bestRank
-LIMIT 10
-"""
-print(pd.read_sql(q6, conn))
+LIMIT 10;
