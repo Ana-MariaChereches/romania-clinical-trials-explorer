@@ -27,15 +27,15 @@ The dashboard has three pages. The file is `powerbi/romania_clinical_trials.pbix
 
 **Overview:** new studies per start year, industry versus academic sponsors, top 15 industry sponsors.
 
-![Overview page](powerbi/overview.png)
+![Overview page](data/powerbi/overview.png)
 
 **Landscape:** active studies by therapeutic area and phase (with sponsors, cities and named centres per cell), and the stop rate by phase.
 
-![Landscape page](powerbi/landscape.png)
+![Landscape page](data/powerbi/landscape.png)
 
 **Sites:** share of studies reached by the largest cities, a map of studies per city and the top 15 named centres.
 
-![Sites page](powerbi/sites.png)
+![Sites page](data/powerbi/sites.png)
 
 ## Key findings
 
