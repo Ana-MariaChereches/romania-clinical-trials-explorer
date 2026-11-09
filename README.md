@@ -94,13 +94,11 @@ Python (pandas), SQL (SQLite), Power BI
 ## Repository structure
 
 ```
-data/raw/        placeholder; the raw API response (raw_studies.json) is not stored in the repository
 data/clean/      cleaned tables: studies, study_area, sites, city_coords, sponsor_alias
-data/powerbi/    results of the SQL queries, read by the dashboard
+data/powerbi/    results of the SQL queries (CSV), Power BI file, PDF and dashboard screenshots
 notebooks/       02 extraction, 03 studies, 04 therapeutic areas, 05 sites, 06 SQLite database,
                  07 SQL analyses, 08 export for Power BI
 sql/             queries, each documented with the question it answers
-powerbi/         Power BI file and screenshots of the three pages
 docs/            requirements
 ```
 
@@ -153,4 +151,4 @@ Requirements: Python 3 with `pandas` and Jupyter. SQLite is part of Python. Powe
    - `07_sql_analyses.ipynb`: runs the queries and shows the results.
    - `08_export_for_powerbi.ipynb`: runs the files in `sql/` and saves the results in `data/powerbi/`.
 2. Without the API: the cleaned tables in `data/clean/` are in the repository, so you can start at `06_load_sqlite.ipynb`.
-3. Open `powerbi/romania_clinical_trials.pbix`. The file already contains the loaded data. To refresh it from your own copy of the repository, change the data source paths (Transform data, Data source settings) to the CSV files in `data/powerbi/` and `data/clean/city_coords.csv`. The numbers use a point as decimal separator: in Power BI set the import locale to English (United States) (File, Options, Current file, Regional settings).
+3. Open `data/powerbi/romania_clinical_trials.pbix`. The file already contains the loaded data. To refresh it from your own copy of the repository, change the data source paths (Transform data, Data source settings) to the CSV files in `data/powerbi/` and `data/clean/city_coords.csv`. The numbers use a point as decimal separator: in Power BI set the import locale to English (United States) (File, Options, Current file, Regional settings).
