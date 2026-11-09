@@ -118,7 +118,7 @@ Hand-made mappings (therapeutic areas, city names, facility aliases, sponsor ali
 - [x] Clean and model the data (pandas)
 - [x] SQL analysis (table sizes and key totals checked against the pandas results)
 - [x] Power BI dashboard (v1: landscape, sponsors, cities, competition, stop rate)
-- [ ] Final checks and documentation
+- [x] Final checks and documentation
 - [ ] v2: comparison with other countries and population-adjusted figures, study duration, termination reasons
 - [ ] v3: simple recruitment projection and a one-page feasibility brief for a sample study
 
