@@ -1,0 +1,88 @@
+area,phaseLabel,studies,notYet,sponsors,cities,namedCentres,note
+Oncology,Phase 3,177,0,69,23,256,
+Immune system,Phase 3,87,0,43,23,106,
+Respiratory,Phase 3,85,0,35,26,141,
+Skin and connective tissue,Phase 3,70,0,32,21,135,
+Blood and lymphatic,Phase 3,56,1,37,14,62,
+Digestive,Phase 3,52,0,30,18,139,
+Cardiovascular,Phase 3,48,0,28,27,125,
+Metabolic and endocrine,Phase 3,45,3,26,27,128,
+Nervous system,Phase 3,41,1,22,26,88,
+Urogenital,Phase 3,37,0,19,21,91,
+Not classified,Phase 3,34,1,25,19,88,
+Respiratory,Phase 2,25,2,22,20,85,
+Oncology,Phase 2,24,2,16,15,46,
+Not classified,No phase,22,7,16,8,25,
+Mental health,Phase 3,21,1,9,12,34,
+Digestive,Phase 2,20,0,15,9,46,
+Immune system,Phase 2,20,0,19,14,47,
+Oncology,Phase 2/3,20,0,13,16,49,
+Infections,Phase 3,16,0,15,12,26,
+Musculoskeletal,Phase 3,16,1,11,11,34,
+Not classified,Phase 2,13,2,12,11,34,
+Skin and connective tissue,Phase 2,13,0,13,7,25,
+Cardiovascular,No phase,12,1,11,7,22,
+Immune system,Phase 1,11,0,10,2,11,
+Infections,Phase 2,10,0,9,11,33,
+Nervous system,No phase,10,2,9,4,18,
+Nervous system,Phase 2,10,0,10,8,18,
+Oncology,Phase 1/2,10,0,8,6,13,
+Skin and connective tissue,Phase 1,10,0,9,3,7,
+Blood and lymphatic,Phase 2,8,0,8,7,14,
+Mental health,No phase,8,2,4,3,6,
+Cardiovascular,Phase 2,7,1,7,12,21,
+Metabolic and endocrine,Phase 2,7,0,7,11,21,
+Oncology,No phase,7,2,7,4,7,
+Oncology,Phase 1,7,0,6,3,8,
+Digestive,No phase,6,2,6,4,6,
+Metabolic and endocrine,No phase,6,2,6,4,13,
+Musculoskeletal,Phase 1,6,0,5,2,6,
+Respiratory,Phase 1/2,6,0,6,5,9,
+Respiratory,Phase 2/3,6,0,5,10,27,
+Blood and lymphatic,Phase 1,5,0,3,2,6,
+Digestive,Phase 2/3,5,0,3,8,19,
+Infections,No phase,5,1,5,2,9,
+Urogenital,No phase,5,0,5,6,11,
+Cardiovascular,Phase 1,4,0,3,2,5,limited data
+Immune system,Phase 4,4,0,4,10,5,limited data
+Musculoskeletal,No phase,4,1,4,3,4,limited data
+Nervous system,Phase 1,4,0,3,2,6,limited data
+Respiratory,No phase,4,0,4,9,18,limited data
+Urogenital,Phase 2,4,0,4,5,6,limited data
+Urogenital,Phase 2/3,4,0,4,14,29,limited data
+Blood and lymphatic,Phase 1/2,3,0,3,2,3,limited data
+Immune system,Phase 2/3,3,0,3,1,4,limited data
+Mental health,Phase 2,3,0,3,4,5,limited data
+Musculoskeletal,Phase 2,3,0,3,3,5,limited data
+Nervous system,Phase 2/3,3,0,3,1,4,limited data
+Not classified,Phase 1,3,0,3,2,2,limited data
+Skin and connective tissue,Phase 4,3,0,3,2,5,limited data
+Blood and lymphatic,Phase 2/3,2,0,2,2,2,limited data
+Cardiovascular,Phase 2/3,2,0,2,11,19,limited data
+Digestive,Phase 1,2,0,2,2,4,limited data
+Digestive,Phase 1/2,2,0,2,6,4,limited data
+Immune system,No phase,2,0,2,2,6,limited data
+Immune system,Phase 1/2,2,0,2,2,3,limited data
+Infections,Phase 1,2,0,2,2,4,limited data
+Infections,Phase 2/3,2,0,2,3,6,limited data
+Metabolic and endocrine,Phase 1/2,2,0,2,2,3,limited data
+Metabolic and endocrine,Phase 2/3,2,0,2,12,25,limited data
+Metabolic and endocrine,Phase 4,2,0,2,9,7,limited data
+Musculoskeletal,Phase 4,2,0,2,2,1,limited data
+Not classified,Phase 1/2,2,0,2,4,6,limited data
+Oncology,Phase 4,2,0,2,3,0,limited data
+Respiratory,Phase 4,2,0,2,10,2,limited data
+Skin and connective tissue,Phase 2/3,2,0,1,9,9,limited data
+Urogenital,Phase 1/2,2,0,2,4,2,limited data
+Blood and lymphatic,No phase,1,0,1,1,1,limited data
+Blood and lymphatic,Phase 4,1,0,1,1,0,limited data
+Cardiovascular,Phase 1/2,1,0,1,2,2,limited data
+Cardiovascular,Phase 4,1,0,1,2,3,limited data
+Infections,Phase 1/2,1,0,1,2,4,limited data
+Mental health,Phase 1/2,1,0,1,1,1,limited data
+Musculoskeletal,Phase 2/3,1,0,1,2,2,limited data
+Nervous system,Phase 4,1,0,1,1,1,limited data
+Not classified,Phase 4,1,0,1,1,1,limited data
+Skin and connective tissue,Phase 1/2,1,0,1,2,2,limited data
+Urogenital,Phase 1,1,0,1,2,2,limited data
+Urogenital,Phase 4,1,0,1,1,1,limited data
